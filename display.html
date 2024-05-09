@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Form Content:</title>
+</head>
+<body>
+    <h2>Stored User Data</h2>
+    <div id="userData"></div>
+
+    <script>
+        // Retrieve data from localStorage
+        var fname = localStorage.getItem('fname');
+        var lname = localStorage.getItem('lname');
+        var email = localStorage.getItem('email');
+        var gender = localStorage.getItem('gender');
+        var hobbies = localStorage.getItem('hobbies');
+        var courseEnrolled = localStorage.getItem('courseEnrolled');
+
+        // Display datagit init
+        var userDataDiv = document.getElementById('userData');
+        userDataDiv.innerHTML = "<p><strong>First Name:</strong> " + fname + "</p>" +
+            "<p><strong>Last Name:</strong> " + lname + "</p>" +
+            "<p><strong>Email:</strong> " + email + "</p>" +
+            "<p><strong>Gender:</strong> " + gender + "</p>" +
+            "<p><strong>Hobbies:</strong> " + hobbies + "</p>" +
+            "<p><strong>Course Enrolled:</strong> " + courseEnrolled + "</p>";
+    </script>   
+</body>
+</html>
